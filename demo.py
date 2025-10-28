@@ -523,14 +523,16 @@ def vis(args):
 
         
         
-
-        arr_to_test = ["vid1","vid2","vid3"]
+        arr_to_test =  [d for d in os.listdir('samples/') if os.path.isdir(os.path.join('samples/', d))]
+        #arr_to_test = ["vid1","vid2","vid3"]
         paths_global         = [f"samples/{elem}/video_original.mp4" for elem in arr_to_test]
 
 
         for i, sample in enumerate(arr_to_test):
-            if i ==2: #trajectory understanding
+            if arr_to_test[i] == "vid3": #trajectory understanding
                 prompt = "Which direction is the object moving?" #
+            else:
+                prompt = ops["prompt"]
 
 
             videos        = ["video_original.mp4"] # , 
