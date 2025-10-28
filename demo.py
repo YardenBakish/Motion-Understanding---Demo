@@ -1,9 +1,4 @@
-'''
-TODO
-1. set up initial framework for distillation - for now do it even on very small numbered examples
-2. set up framework to blur objects and create entire datasets
 
-'''
 import os
 from pathlib import Path
 import torch.nn.functional as F
@@ -13,9 +8,9 @@ import argparse
 import matplotlib.pyplot as plt
 
 import re
-print("HERE")
+
 from transformers import  AutoProcessor,  AutoModelForImageTextToText 
-print("HERE")
+
 
 from transformers.modeling_utils import load_sharded_checkpoint
 from safetensors.torch import load_file
